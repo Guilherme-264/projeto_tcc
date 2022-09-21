@@ -1,0 +1,21 @@
+create database gerenciador;
+
+create table cliente (
+ID int not null primary key,
+nomecliente varchar(30),
+sobrenomecliente varchar(30),
+CPFcliente int(11),
+enderecocliente varchar(30),
+chavepix varchar(40)
+);
+
+create table compra(
+ID int not null primary key,
+nomecliente varchar(30),
+pesoCaixa int(2) not null,
+quantidadeCaixa1 int(4) not null,
+valorporcaixa1 int(2) not null,
+quantidadeCaixa2 int(4) not null,
+valorporcaixa2 int(2) not null,
+dataPagamento date
+);
