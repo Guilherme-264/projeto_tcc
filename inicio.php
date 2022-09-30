@@ -7,6 +7,7 @@
     <div class="btn-group btn-group-justified">
     </div>
   <?php include ('transferencia/listaTransferencia.php');
+  include ('transferencia/pago.php');
   include('despesas/listaDespesa.php');
   ?> 
 

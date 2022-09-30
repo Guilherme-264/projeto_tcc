@@ -14,7 +14,6 @@
         </head>
         <?php  
         include("../conexao.php"); // inclui o arquivo de conexão com BD
-
         $nomecliente = $_POST['nomecliente'];
         $sobrenomecliente = $_POST['sobrenomecliente'];
         $Telefone = $_POST['Telefone'];

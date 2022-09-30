@@ -57,6 +57,12 @@
             <div class="form-group">
              Data do pagamento: <input class="form-control" type="date" name="dataPagamento">
             </div>
+            <div>
+             Situação:  <input type="radio" id="situacao" name="situacao" value="1">
+  <label for="Pago">Pago</label><br> 
+  <input type="radio" id="situacao" name="situacao" value="0">
+  <label for="Nao pago">Não pago</label><br> 
+            </div>
             <input type="submit" class="btn btn-primary" value="Cadastrar" name="btnEnviar">
         </div>
     </form>

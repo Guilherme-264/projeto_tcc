@@ -23,13 +23,13 @@
         </thead>
         <tbody>
             <?php
-            $ID= $_GET["ID"];
-            $sql = "SELECT * FROM compra where ID= {$ID}" ;
-            $rs = mysqli_query($conn, $sql) or die ("Não foi possivel conectat com o banco de dados");
-            $linha = mysqli_fetch_assoc($rs); {
+           
+           $sql = "SELECT * FROM compra" ;
+           $rs = mysqli_query($conn, $sql) or die ("Não foi possivel conectat com o banco de dados");
+           $linha = mysqli_fetch_assoc($rs); {
                 $totalCaixa1 = 0;
                 $totalCaixa2 = 0;
-                    $totalCaixa1 += ($linha['quantidadeCaixa1'] * $linha['valorporcaixa1']);
+                $totalCaixa1 += ($linha['quantidadeCaixa1'] * $linha['valorporcaixa1']);
                 $totalCaixa2 += ($linha['quantidadeCaixa2'] * $linha['valorporcaixa2']);
             ?>
 
@@ -46,6 +46,9 @@
                 <td><?php echo $linha['dataPagamento'] ?></td>
                 <td>R$<?php echo $totalCaixa1+$totalCaixa2 ?></td>
             </tr>
+            <td><a class="btn btn-success" href="atualizaPago.php?ID=<?php echo $linha['ID']?>"> ver</a>
+            
+
             <?php } ?>
         </tbody>
     </table>

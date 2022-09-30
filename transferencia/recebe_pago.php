@@ -26,13 +26,13 @@ $valorporcaixa1 = $_POST['valorporcaixa1'];
 $quantidadeCaixa2 = $_POST['quantidadeCaixa2'];
 $valorporcaixa2 = $_POST['valorporcaixa2'];
 $dataPagamento = $_POST['dataPagamento'];
-$situacao = $_POST['situacao'];
 
 
 
 
-$sql = "INSERT INTO compra (codfornecedor, pesoCaixa, quantidadeCaixa1, valorporcaixa1, quantidadeCaixa2, valorporcaixa2, dataPagamento, situacao) 
-        VALUES ('$codfornecedor', '$pesoCaixa', '$quantidadeCaixa1', '$valorporcaixa1', '$quantidadeCaixa2','$valorporcaixa2','$dataPagamento', '$situacao')";
+
+$sql = "INSERT INTO compra (cod_fornecedor, pesoCaixa, quantidadeCaixa1, valorporcaixa1, quantidadeCaixa2, valorporcaixa2, dataPagamento) 
+        VALUES ('$codfornecedor', '$pesoCaixa', '$quantidadeCaixa1', '$valorporcaixa1', '$quantidadeCaixa2','$valorporcaixa2','$dataPagamento')";
 
 
 

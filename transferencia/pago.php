@@ -4,8 +4,7 @@
 <head>
     <link href="titulo.css" rel="stylesheet">
 </head>
-<header>
-</header>
+
 <body>
     <h2>Transferencias pagas</h2>
 
@@ -28,6 +27,8 @@
             $sql = "SELECT * FROM compra";
             $rs = mysqli_query($conn, $sql);
             while ($linha = mysqli_fetch_array($rs)) {
+                $situacao = ($linha['situacao']);
+                if ($situacao == 1) {
                 $totalCaixa1 = 0;
                 $totalCaixa2 = 0;
                 $totalCaixa1 += ($linha['quantidadeCaixa1'] * $linha['valorporcaixa1']);
@@ -44,7 +45,7 @@
                     <a class="btn btn-danger" href="excluirUsuario.php?ID=<?php echo $linha['ID']?>">Excluir</a>
                 </td>
             </tr>
-            <?php } ?>
+            <?php } } ?>
         </tbody>
     </table>
 </div>

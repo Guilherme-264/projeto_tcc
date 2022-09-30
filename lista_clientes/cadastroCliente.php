@@ -18,10 +18,10 @@
          sobrenome : <input class="form-control" type="text" name="sobrenomecliente">
         </div>
         <div class="form-group">
-            Telefone: <input class="form-control" type="text" name="Telefone">
+            Telefone: <input class="form-control" type="number" name="Telefone">
         </div>
         <div class="form-group">
-            CPF <input class="form-control" type="text" name="CPFcliente">
+            CPF <input class="form-control" type="number" name="CPFcliente">
         </div>
         <div class="form-group">
             Endereço <input class="form-control" type="text" name="enderecocliente">
