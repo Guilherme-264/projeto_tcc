@@ -35,7 +35,7 @@
                 <td>R$<?php echo $linha['valordespesa'] ?></td>
                 <td><?php echo $linha['obs'] ?></td>
 
-                <td><a class="btn btn-success" href="transferencia/edita_transferencia.php?ID=<?php echo $linha['ID']?>"> Ver</a>
+                <td><a class="btn btn-success" href="despesas/verDespesa.php?ID=<?php echo $linha['ID']?>"> Ver</a>
                     <a class="btn btn-danger" href="excluirUsuario.php?ID=<?php echo $linha['ID']?>">Excluir</a>
                 </td>
             </tr>

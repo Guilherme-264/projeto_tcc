@@ -32,8 +32,9 @@
                             <td><?php echo $linha['codfornecedor'] ?></td>
                             <td>R$<?php echo $totalCaixa1 + $totalCaixa2 ?></td>
                             <td><?php echo $linha['dataPagamento'] ?></td>
-                            <td><a class="btn btn-success" href="transferencia/edita_transferencia.php?ID=<?php echo $linha['ID'] ?>"> ver</a>
-                                <a class="btn btn-danger" href="excluirUsuario.php?ID=<?php echo $linha['ID'] ?>">Excluir</a>
+                            <td><a class="btn btn-success" href='transferencia/edita_transferencia.php?ID=<?php echo $linha['ID'] ?>'> ver</a>
+
+                               <a class="btn btn-danger" href="excluirUsuario.php?ID=<?php echo $linha['ID'] ?>">Excluir</a>
                             </td>
                         </tr>
                 <?php }

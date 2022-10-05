@@ -1,6 +1,7 @@
 <html>
 <?php
     include("..\conexao.php");
+    
 ?>
 <body>
     <header>
@@ -23,8 +24,9 @@
         </thead>
         <tbody>
             <?php
-           
-           $sql = "SELECT * FROM compra" ;
+           $ID= $_GET["ID"];
+
+           $sql = "SELECT * FROM compra where ID= {$ID}" ;
            $rs = mysqli_query($conn, $sql) or die ("Não foi possivel conectat com o banco de dados");
            $linha = mysqli_fetch_assoc($rs); {
                 $totalCaixa1 = 0;
