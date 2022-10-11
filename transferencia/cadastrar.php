@@ -14,7 +14,7 @@
         include('../conexao.php');
         include('menuTransferencia.php');
 
-        $sql = "SELECT * FROM cliente";
+        $sql = "SELECT * FROM produtor";
         $rs = mysqli_query($conn, $sql);
         ?>
 
@@ -32,7 +32,7 @@
                     <?php while ($linha = mysqli_fetch_array($rs)) {
                     ?>
                         <td>
-                            <option value="<?php echo $linha['ID'] ?>"><?php echo $linha['nomecliente'] ?></option>
+                            <option value="<?php echo $linha['ID'] ?>"><?php echo $linha['nomeProdutor'] ?></option>
                         </td>
                     <?php } ?>
                 </select>

@@ -14,15 +14,15 @@
         </head>
         <?php  
         include("../conexao.php"); // inclui o arquivo de conexão com BD
-        $nomecliente = $_POST['nomecliente'];
-        $sobrenomecliente = $_POST['sobrenomecliente'];
-        $Telefone = $_POST['Telefone'];
-        $CPFcliente = $_POST['CPFcliente'];
-        $enderecocliente = $_POST['enderecocliente'];
+        $cliente = $_POST['cliente'];
+        $CNPJcliente = $_POST['CNPJcliente'];
+        $numero = $_POST['numero'];
+        $email = $_POST['email'];
+        $endereco = $_POST['endereco'];
         $chavepix = $_POST['chavepix'];
 
-        $sql = "INSERT INTO cliente (nomecliente, sobrenomecliente, Telefone, CPFcliente, enderecocliente, chavepix) 
-                VALUES ('$nomecliente', '$sobrenomecliente', '$Telefone', '$CPFcliente', '$enderecocliente','$chavepix')";
+        $sql = "INSERT INTO cliente (cliente, CNPJcliente, numero, email, endereco, chavepix) 
+                VALUES ('$cliente', '$CNPJcliente', '$numero', '$email', '$endereco','$chavepix')";
 
         mysqli_query($conn, $sql);
 

@@ -1,19 +1,19 @@
 <?php
 include("..\conexao.php"); // inclui o arquivo de conexão com BD
-$nomecliente = $_POST['nomecliente'];
-$sobrenomecliente = $_POST['sobrenomecliente'];
+$nomeProdutor = $_POST['nomeProdutor'];
+$sobrenomeProdutor = $_POST['sobrenomeProdutor'];
 $Telefone = $_POST['Telefone'];
-$CPFcliente = $_POST['CPFcliente'];
-$enderecocliente = $_POST['enderecocliente'];
+$CPFProdutor = $_POST['CPFProdutor'];
+$enderecoProdutor = $_POST['enderecoProdutor'];
 $chavepix = $_POST['chavepix'];
 $ID =   $_POST ['ID'];
-$sql = "UPDATE cliente SET
+$sql = "UPDATE produtor SET
 
-nomecliente = '{$nomecliente}',
-sobrenomecliente = '{$sobrenomecliente}',
+nomeProdutor = '{$nomeProdutor}',
+sobrenomeProdutor = '{$sobrenomeProdutor}',
 Telefone = '{$Telefone}',
-CPFcliente = '{$CPFcliente}',
-enderecocliente = '{$enderecocliente}',
+CPFProdutor = '{$CPFProdutor}',
+enderecoProdutor = '{$enderecoProdutor}',
 chavepix = '{$chavepix}'
 where ID ={$ID} 
 ";

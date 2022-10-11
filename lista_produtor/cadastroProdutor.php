@@ -6,25 +6,25 @@
 <header>
     <?php include ('menuLista.php'); ?>
 </header>
-    <form action="recebeUsuario.php" method="POST">
+    <form action="recebeProdutor.php" method="POST">
     <div class="container">    
         <h2>Cadastro de cliente</h2>
 
 
         <div class="form-group">
-            Nome : <input class="form-control" type="text" name="nomecliente">
+            Nome : <input class="form-control" type="text" name="nomeProdutor">
         </div>
         <div class="form-group">
-         sobrenome : <input class="form-control" type="text" name="sobrenomecliente">
+         sobrenome : <input class="form-control" type="text" name="sobrenomeProdutor">
         </div>
         <div class="form-group">
             Telefone: <input class="form-control" type="number" name="Telefone">
         </div>
         <div class="form-group">
-            CPF <input class="form-control" type="number" name="CPFcliente">
+            CPF <input class="form-control" type="number" name="CPFProdutor">
         </div>
         <div class="form-group">
-            Endereço <input class="form-control" type="text" name="enderecocliente">
+            Endereço <input class="form-control" type="text" name="enderecoProdutor">
         </div>
         <div class="form-group">
             Chave do PIX <input class="form-control" type="text" name="chavepix">
