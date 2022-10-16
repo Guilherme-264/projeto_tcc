@@ -18,6 +18,6 @@
 
     <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="../inicio.php">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="../lista_produtor/cadastroProdutor.php">Cadastrar Fornecedor</a></li>
+        <li class="nav-item"><a class="nav-link" href="listaCliente.php">Lista Clientes</a></li>
         <li class="nav-item"><a class="nav-link" href="../lista_produtor/listaProdutor.php">Listar Fornecedor</a></li>
     </ul>

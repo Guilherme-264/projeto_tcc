@@ -17,6 +17,6 @@
 
     <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="../inicio.php">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="../lista_produtor\cadastroprodutor.php">Cadastrar Fornecedor</a></li>
+        <li class="nav-item"><a class="nav-link" href="lista_Clientes\listaCliente.php">Lista clientes</a></li>
         <li class="nav-item"><a class="nav-link" href="../lista_produtor\listaProdutor.php">Listar Fornecedor</a></li>
     </ul>

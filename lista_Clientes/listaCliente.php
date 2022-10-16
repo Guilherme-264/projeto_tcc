@@ -2,7 +2,8 @@
 <?php include('..\conexao.php'); ?>
 
 <head>  
-<link href="../titulo.css" rel="stylesheet">
+<link href="../css.css"    rel="stylesheet">
+
 </head>
 
 <header>
@@ -11,7 +12,9 @@
 <body>
 <br/>
     <h2>Listagem de Clientes</h2>
-<br/>
+    
+    <ul class="relative"> <a class="btn btn-primary" href="cadastraCliente.php">Novo Cliente</a></ul>
+    <br/>
 <div class="container">
     <table class="table table-bordered table table-striped">
         <thead>
@@ -30,6 +33,7 @@
             $rs = mysqli_query($conn, $sql);
             while ($linha = mysqli_fetch_array($rs)) {
             ?>
+            
             <tr>
                 <td><?php echo $linha['ID']?></td>
                 <td><?php echo $linha['cliente' ] ?></td>
