@@ -2,7 +2,7 @@
 <?php include('conexao.php'); ?>
 
 <head>
-    <link href="../titulo.css" rel="stylesheet">
+    <link href="../css.css" rel="stylesheet">
 </head>
 <header>
 </header>
@@ -35,15 +35,21 @@
                 <td>R$<?php echo $linha['valordespesa'] ?></td>
                 <td><?php echo $linha['obs'] ?></td>
 
-                <td><a class="btn btn-success" href="despesas/verDespesa.php?ID=<?php echo $linha['ID']?>"> Ver</a>
-                    <a class="btn btn-danger" href="excluirUsuario.php?ID=<?php echo $linha['ID']?>">Excluir</a>
+                <td>
+                    <a class="btn btn-success" href="despesas/verDespesa.php?ID=<?php echo $linha['ID']?>"> Ver</a> 
+                    <a class="btn btn-danger" href='#' onclick='confirmar()'> Excluir</a>                
                 </td>
+
             </tr>
-            <?php } ?>
+            
         </tbody>
     </table>
 </div>
-  
+<script>
+    function confirmar (){
+        if (confirm('Você realmente deseja excluir esta linha?'))
+        location.href = "despesas/excluir_despesa.php?ID=<?php echo $linha['ID']?>";       }
+</script> 
 </body>
-
+<?php } ?>
 </html>

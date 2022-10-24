@@ -2,7 +2,7 @@
 <?php include('..\conexao.php'); ?>
 
 <head>  
-<link href="../titulo.css" rel="stylesheet">
+<link href="../css.css" rel="stylesheet">
 </head>
 
 <header>
@@ -10,16 +10,16 @@
 </header>
 <body>
 <br/>
-    <h2>Listagem de usuários</h2>
+    <h2>Listagem de Fornecedor</h2>
+    <ul class="relative"> <a class="btn btn-primary" href="cadastroProdutor.php">Novo produtor</a></ul>
 <br/>
 <div class="container">
     <table class="table table-bordered table table-striped">
         <thead>
             <th>ID</th>
-            <th>Nome do cliente</th>
-            <th>Sobrenome do cliente</th>
-
-            <th>Número do cliente</th>
+            <th>Nome do Produtor</th>
+            <th>Sobrenome do Produtor</th>
+            <th>Número do Produtor</th>
             <th>CPF</th>
             <th>Endereço</th>
             <th>PIX</th>
@@ -41,10 +41,14 @@
                 <td><?php echo $linha['chavepix'] ?></td>
 
                 <td><a class="btn btn-success" href="EditarProdutor.php?ID=<?php echo $linha['ID']?>"> Editar</a>
-                    <a class="btn btn-danger" href="excluirProdutor.php?ID=<?php echo $linha['ID']?>">Excluir</a>
+                <a class="btn btn-danger" href='#' onclick='confirmar()'> Excluir</a>                
                 </td>
             </tr>
-</div>
+</div>      <script>
+                function confirmar (){
+                if (confirm('Você realmente deseja excluir esta linha?'))
+                 location.href = "excluir_produtor.php?ID=<?php echo $linha['ID']?>";       }
+            </script> 
             <?php } ?>
         </tbody>
     </table>

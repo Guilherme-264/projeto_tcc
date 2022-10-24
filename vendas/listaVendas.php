@@ -1,12 +1,12 @@
 <html>
 <?php include('conexao.php'); ?>
 <head>
-    <link href="titulo.css" rel="stylesheet">
+    <link href="css.css" rel="stylesheet">
 </head>
 <body>
-    <h2>Transferências</h2>
+    <h2>Vendas</h2>
     <div class="container">
-        <ul> <a class="btn btn-primary" href="transferencia/cadastrar.php">Cadastrar compra</a></ul>
+        <ul> <a class="btn btn-primary" href="vendas/cadastrarVenda.php">Cadastrar Venda</a></ul>
         <table class="table table-bordered table table-striped">
             <thead>
                 <th>ID</th>
@@ -28,11 +28,16 @@
                             <td><?php echo $linha['cliente'] ?></td>
                             <td>R$<?php echo $totalCaixa?></td>
                             <td><?php echo $linha['quantidadeCaixa'] ?></td>
-                            <td><a class="btn btn-success" href='transferencia/edita_transferencia.php?ID=<?php echo $linha['ID'] ?>'> ver</a>
+                            <td><a class="btn btn-success" href='vendas/editaVendas.php?ID=<?php echo $linha['ID'] ?>'> ver</a>
 
-                               <a class="btn btn-danger" href="excluirUsuario.php?ID=<?php echo $linha['ID'] ?>">Excluir</a>
+                            <a class="btn btn-danger" href='#' onclick='confirmar()'> Excluir</a>                
                             </td>
                         </tr>
+                    <script>
+                        function confirmar (){
+                        if (confirm('Você realmente deseja excluir esta linha?'))
+                        location.href = "vendas/excluir_venda.php?ID=<?php echo $linha['ID']?>";       }
+                    </script>     
                 <?php }
                  ?>
             </tbody>

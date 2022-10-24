@@ -44,10 +44,15 @@
                 <td><?php echo $linha['chavepix'] ?></td>
 
                 <td><a class="btn btn-success" href="editaCliente.php?ID=<?php echo $linha['ID']?>"> Editar</a>
-                    <a class="btn btn-danger" href="excluirProdutor.php?ID=<?php echo $linha['ID']?>">Excluir</a>
+                <a class="btn btn-danger" href='#' onclick='confirmar()'> Excluir</a>                
                 </td>
             </tr>
 </div>
+            <script>
+                 function confirmar (){
+                if (confirm('Você realmente deseja excluir esta linha?'))
+                location.href = "excluir_cliente.php?ID=<?php echo $linha['ID']?>";       }
+            </script> 
             <?php } ?>
         </tbody>
     </table>

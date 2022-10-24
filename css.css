@@ -3,6 +3,7 @@ h2{
 }
 ul.relative{
     position: relative;
-  
+    top: 4%;
+    left: 10%;
   }
 

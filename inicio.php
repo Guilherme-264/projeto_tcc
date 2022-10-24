@@ -8,8 +8,8 @@
     </div>
   <?php include ('transferencia/listaTransferencia.php');
   include ('transferencia/pago.php');
-  include('despesas/listaDespesa.php');
   include('vendas/listaVendas.php');
+  include('despesas/listaDespesa.php');
   ?> 
 
 </body>

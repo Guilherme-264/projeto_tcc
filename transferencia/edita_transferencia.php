@@ -13,7 +13,7 @@
     <table class="table table-bordered table table-striped">
         <thead>
             <th>ID</th>
-            <th>Nome do cliente</th>
+            <th>Nome do Produtor</th>
             <th>Peso da caixa</th>
             <th>Quantidade de caixa de 1°</th>
             <th>Valor por caixa de 1°</th>
@@ -33,13 +33,22 @@
                 $totalCaixa2 = 0;
                 $totalCaixa1 += ($linha['quantidadeCaixa1'] * $linha['valorporcaixa1']);
                 $totalCaixa2 += ($linha['quantidadeCaixa2'] * $linha['valorporcaixa2']);
+                $codProdutor = 0;
+                $codProdutor += ($linha ['codfornecedor']);
+
+                $sql = "SELECT *  FROM produtor where ID = $codProdutor ";
+                        $rs = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_array($rs)){
+                         $nome =($row['nomeProdutor']);
+                         $sobrenome=($row['sobrenomeProdutor']);
+                         } 
             ?>
 
             
                 
             <tr>
                 <td><?php echo $linha['ID']?></td>
-                <td><?php echo $linha['codfornecedor' ] ?></td>
+                <td><?php echo $nome ," ",  $sobrenome?></td>
                 <td><?php echo $linha['pesoCaixa'] ?>kg</td>
                 <td><?php echo $linha['quantidadeCaixa1'] ?></td>
                 <td>R$<?php echo $linha['valorporcaixa1'] ?></td>
@@ -48,7 +57,7 @@
                 <td><?php echo $linha['dataPagamento'] ?></td>
                 <td>R$<?php echo $totalCaixa1+$totalCaixa2 ?></td>
             </tr>
-            <td><a class="btn btn-success" href="atualizaPago.php?ID=<?php echo $linha['ID']?>"> ver</a>
+            <td><a class="btn btn-success" href="atualizaPago.php?ID=<?php echo $linha['ID']?>"> Pagar</a>
             
 
             <?php } ?>
